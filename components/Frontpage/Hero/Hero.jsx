@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React, { Suspense } from 'react'
 import styles from './Hero.module.scss';
 const Hero = ()=>{
     return(

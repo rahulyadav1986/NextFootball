@@ -31,11 +31,8 @@ const options = {
 		'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
 	}
 };
-fetch('https://free-football-soccer-videos.p.rapidapi.com/', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-export async function getServerSideProps(){
+
+export async function getStaticProps(){
   const responseLatest= await fetch(`https://free-football-soccer-videos.p.rapidapi.com/`, options);
   const Data = await responseLatest.json();
   return{

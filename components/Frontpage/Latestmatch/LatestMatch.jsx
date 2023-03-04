@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import React, { Suspense } from 'react'
 import { useState } from "react";
 import styles from "./Latestmatch.module.scss";
 const LatestMatch = ({Data})=>{

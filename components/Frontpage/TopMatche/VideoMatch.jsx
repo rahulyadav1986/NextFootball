@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react'
 const VideoMatch = ({item})=>{
     return(
         <>
