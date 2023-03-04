@@ -1,17 +1,18 @@
+import Image from 'next/image';
 import styles from './Hero.module.scss';
 const Hero = ()=>{
     return(
         <>
             <div className={styles.hero_container}>
                 <div className={styles.slide_item}>
-                    <img className={styles.hero_bg} src="/images/hero_bg.jpg" alt="" />
+                    <Image src="/images/hero_bg.jpg" fill={true} className={styles.hero_bg} alt="thumbnail"  />
                     <div className={styles.content_wrapper}>
                         <div className={`${styles.container} container d-flex align-items-center justify-content-between`}>
                             <div className={`${styles.content_area} d-flex flex-column justify-content-center`}>
                                 <div className={styles.tag_line}>welcome to</div>
                                 <h3>pro soccer<br /><span>football club</span></h3>                               
                             </div>
-                            <img className={styles.hero_avator} src="/images/hero_avator2.png" alt="" />
+                            <Image src="/images/hero_avator2.png" fill={true} className={styles.hero_avator} alt="thumbnail"  />
                         </div>
                     </div>
                 </div>

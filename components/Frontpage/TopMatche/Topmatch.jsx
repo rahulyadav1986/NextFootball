@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import React, { useEffect, useState } from "react";
 import styles from "./Topmatch.module.scss";
 import VideoMatch from "./VideoMatch";
+import Image from "next/image";
 const TopMatch = ({Data})=>{
     const [Loading, setLoading] = useState(false);
     const [clickPop, setClickPop] = useState(false);
@@ -36,22 +37,22 @@ const TopMatch = ({Data})=>{
                                 :
                                 <div key={i} className={`${styles.grid_item}`} onClick={() => getPop(i)}>
                                     <div className={styles.image_wrapper}>
-                                        <img src={item.thumbnail} alt="" />
+                                        <Image src={item.thumbnail} fill={true} alt="thumbnail" />
                                     </div>
                                     <div className={styles.details}>
-                                        <div className={`${styles.compitition} d-flex align-items-center`}>                                                  
-                                            <img src="/images/trophy.png" className={styles.trophy} alt="" />                                             
+                                        <div className={`${styles.compitition} d-flex align-items-center`}>  
+                                            <Image src="/images/trophy.png" className={styles.trophy} fill={true} alt="trophy" /> 
                                             <h6>{item.competition.name}</h6>
                                             
                                         </div>
                                         <ul className={`${styles.team_match} d-flex align-itms-center justify-content-between`}>                       
                                             <li className="d-flex align-items-center">
-                                                <img src="/images/ball.png" alt="" />                            
+                                                <Image src="/images/ball.png" fill={true} alt="ball" /> 
                                                 <h3>{item.side1.name}</h3>
                                             </li>
                                             <li className={`${styles.versus} d-flex align-items-center`}>VS</li>
                                             <li className="d-flex align-items-center">
-                                                <img src="/images/ball.png" alt="" />                            
+                                                <Image src="/images/ball.png" fill={true} alt="ball" />                     
                                                 <h3>{item.side2.name}</h3>
                                             </li>
                                         </ul>
@@ -80,7 +81,7 @@ const TopMatch = ({Data})=>{
                                     <div onClick={() => getPop(!clickPop)} className={styles.pop_over_latest_video}>
                                         <div className={styles.inner_pop}>
                                             <div className={`${styles.compitition} d-flex align-items-center`}>                                                  
-                                                <img src="/images/trophy.png" className={styles.trophy} alt="" />   
+                                                <Image src="/images/trophy.png" className={styles.trophy} fill={true} alt="trophy"  /> 
                                                 <div>
                                                     <h6>Competititon Name</h6>
                                                     <h2>{item.competition.name}</h2>
@@ -100,12 +101,12 @@ const TopMatch = ({Data})=>{
                                                     } 
                                                     <ul className={`${styles.team_match} d-flex align-itms-center justify-content-between`}>                       
                                                         <li className="d-flex align-items-center">
-                                                            <img src="/images/ball.png" alt="" />                            
+                                                            <Image src="/images/ball.png" fill={true} alt="ball" />                             
                                                             <h3>{item.side1.name}</h3>
                                                         </li>
                                                         <li className={`${styles.versus} d-flex align-items-center`}>VS</li>
                                                         <li className="d-flex align-items-center">
-                                                            <img src="/images/ball.png" alt="" />                            
+                                                            <Image src="/images/ball.png" fill={true} alt="ball" />                         
                                                             <h3>{item.side2.name}</h3>
                                                         </li>
                                                     </ul>

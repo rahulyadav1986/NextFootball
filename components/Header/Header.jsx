@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link"
 import styles  from './Header.module.scss';
 const Header = ()=>{
@@ -6,7 +7,9 @@ const Header = ()=>{
             <header className={styles.header}>
                 <div className="container d-flex align-items-center justify-content-center">
                     <div className={styles.logo}>
-                        <Link href="/"><img src="/images/logo.png" alt="" /></Link>
+                        <Link href="/">
+                            <Image src="/images/logo.png" fill={true} alt="thumbnail" />
+                        </Link>
                     </div>
                     {/* <ul className={`${styles.menu_area} d-flex`}>
                         <li>

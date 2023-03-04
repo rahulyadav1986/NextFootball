@@ -61,7 +61,7 @@
                     img{
                         width: auto;
                         height: auto;
-                        position: relative;
+                        position: relative !important;
                     }
                 }
             }
@@ -75,8 +75,9 @@
                 width: 100%;
                 padding:0;
                 .trophy{
-                    width: 2rem;
+                    width: 2rem !important;
                     margin-right: 1rem;
+                    position: relative !important;
                 }
                 h6{
                     font-size: 14px;
@@ -93,8 +94,9 @@
                     font-family: var(--title-fonts);
                 }
                 img{
-                    width: 2rem;
+                    width: 2rem !important;
                     margin-right: 8px;
+                    position: relative !important;
                 }
                 h3{
                     
@@ -129,8 +131,9 @@
     @extend .transition;
     .compitition{
         img{
-            width: 5rem;
+            width: 5rem !important;
             margin-right: 12px;
+            position: relative !important;
             
         }
         h2{
@@ -170,8 +173,9 @@
             font-family: var(--title-fonts);
         }
         img{
-            width: 2rem;
+            width: 2rem !important;
             margin-right: 8px;
+            position: relative !important;
         }
         h3{
             
